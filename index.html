@@ -117,5 +117,18 @@
         <p>Building a smarter future for Philippine agriculture 🌾</p>
     </footer>
 
+    <script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll(".section, .card, .hero-text");
+hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
 </body>
 </html>
