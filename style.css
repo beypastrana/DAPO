@@ -1,0 +1,22 @@
+
+/* Vision & Mission */
+.vision-mission {
+    background: #f1f8e9;
+}
+
+/* Why Section */
+.why {
+    background: #ffffff;
+}
+
+.why-list {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.why-list li {
+    padding: 10px;
+    font-size: 16px;
+}
