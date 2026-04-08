@@ -126,8 +126,22 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-const hiddenElements = document.querySelectorAll(".section, .card, .hero-text");
-hiddenElements.forEach((el) => observer.observe(el));
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    });
+});
+
+document.querySelectorAll(".section, .card, .hero-text")
+.forEach(el => observer.observe(el));
+
+window.addEventListener("scroll", () => {
+    document.querySelector(".navbar")
+    .classList.toggle("scrolled", window.scrollY > 50);
+});
 </script>
 
 </body>
