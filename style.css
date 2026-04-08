@@ -193,3 +193,41 @@ footer {
     padding: 20px;
     font-size: 14px;
 }
+
+.nav-links a {
+    white-space: nowrap;
+}
+
+body {
+    background: #f1f8e9;
+    color: #2e3d2f;
+    line-height: 1.6;
+    background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 50, 0, 0.7), rgba(0, 50, 0, 0.7)),
+    url('https://images.unsplash.com/photo-1500595046743-cd271d694d30');
+    background-size: cover;
+    background-position: center;
+}
+.section h2::after {
+    content: "🌾🌱🌾";
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.btn {
+    background: linear-gradient(45deg, #4caf50, #2e7d32);
+    border: 2px solid #a5d6a7;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #66bb6a, #1b5e20);
+}
+
+html {
+    scroll-behavior: smooth;
+}
