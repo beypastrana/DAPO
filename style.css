@@ -7,23 +7,24 @@
 }
 
 body {
+    background: #f4fbf2;
+    color: #2f3e2f;
     line-height: 1.6;
-    background: #f9fff6;
-    color: #333;
 }
 
-/* Navbar */
+/* Navbar (deep farm green) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2e7d32;
+    background: #1b5e20;
     padding: 15px 40px;
     color: #fff;
+    border-bottom: 4px solid #a5d6a7;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -31,26 +32,26 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #e8f5e9;
     text-decoration: none;
     font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: #c8e6c9;
+    color: #a5d6a7;
 }
 
-/* Hero Section */
+/* Hero Section with farm + livestock feel */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
+    background: linear-gradient(rgba(0, 60, 0, 0.6), rgba(0, 60, 0, 0.6)),
+    url('https://images.unsplash.com/photo-1592982537447-6cdbd7a1f02d');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 95vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,70 +61,96 @@ body {
 }
 
 .hero h2 {
-    font-size: 42px;
+    font-size: 48px;
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 10px;
 }
 
+/* Button (leaf style) */
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #66bb6a;
-    color: #fff;
-    border-radius: 25px;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #66bb6a, #388e3c);
+    color: white;
+    border-radius: 30px;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #43a047;
+    background: linear-gradient(45deg, #81c784, #2e7d32);
 }
 
 /* Sections */
 .section {
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 .section h2 {
-    margin-bottom: 20px;
     color: #2e7d32;
+    font-size: 30px;
 }
 
-/* Cards */
+/* Divider leaf style */
+.section h2::after {
+    content: "🌱";
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Cards (farm tiles look) */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 25px;
     margin-top: 30px;
 }
 
 .card {
-    background: #fff;
+    background: #ffffff;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border: 2px solid #c8e6c9;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transition: 0.3s;
-    border-top: 5px solid #66bb6a;
+    position: relative;
 }
 
+/* Livestock emoji badge */
+.card::before {
+    content: "🐄";
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #66bb6a;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+.card:nth-child(2)::before { content: "🌾"; }
+.card:nth-child(3)::before { content: "🚜"; }
+.card:nth-child(4)::before { content: "🐖"; }
+
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.02);
 }
 
 /* Vision & Mission */
 .vision-mission {
-    background: #e8f5e9;
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
 }
 
 /* Why Section */
 .why {
-    background: #f1f8e9;
+    background: #f9fff6;
 }
 
 .why-list {
@@ -135,23 +162,34 @@ body {
 
 .why-list li {
     padding: 12px;
-    font-size: 16px;
-    border-left: 4px solid #66bb6a;
-    margin-bottom: 10px;
-    background: #fff;
-    border-radius: 5px;
+    margin-bottom: 12px;
+    background: #ffffff;
+    border-left: 5px solid #66bb6a;
+    border-radius: 8px;
+    position: relative;
 }
 
-/* Contact */
+/* Add livestock icons per item */
+.why-list li::before {
+    content: "🐓";
+    margin-right: 10px;
+}
+
+.why-list li:nth-child(2)::before { content: "🐄"; }
+.why-list li:nth-child(3)::before { content: "🌾"; }
+.why-list li:nth-child(4)::before { content: "📊"; }
+.why-list li:nth-child(5)::before { content: "🌍"; }
+
+/* Contact (earthy green block) */
 .contact {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
     color: #fff;
 }
 
 /* Footer */
 footer {
-    background: #1b5e20;
-    color: #fff;
-    text-align: center;
-    padding: 15px;
+    background: #0d3b12;
+    color: #c8e6c9;
+    padding: 20px;
+    font-size: 14px;
 }
